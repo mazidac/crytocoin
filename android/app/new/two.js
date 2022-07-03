@@ -11,12 +11,14 @@ const Chart = ({route}) =>{
         <View style={{flex:1}}>
            
             <View style={{flexDirection:'row',marginTop:30,justifyContent:'space-between',margin:10}}>
-            <Image  style={{height: 30, width: 30}} source={require('../src/arrow.png')} />
+            <Image  style={{height: 25, width: 25}} source={require('../src/arrow.png')} />
             <Text style={{fontWeight:'bold',fontSize:18}}>{route.params.test}</Text>
-            <Image  style={{height: 32, width: 30,}} source={require('../src/bell.png')} />
+            <Image  style={{height: 32, width: 28,}} source={require('../src/bell.png')} />
+            </View>
+            <View style={{alignItems:'center'}}>
+            <Image source={{uri:route.params.zero}} style={{borderRadius:50,backgroundColor:'red',height:45,width:45,padding:15,marginTop:25}} />
             </View>
             <View style={{flexDirection:'column',padding:10}}>
-                <Image source={{uri:route.params.zero}} style={{borderRadius:50,backgroundColor:'red',height:45,width:45,padding:15,marginLeft:170,marginTop:25}} />
                 <Text style={{textAlign:'center',fontSize:25,fontWeight:'bold',marginTop:15}}>${route.params.one}</Text>
                 <View style={{flexDirection:'row',marginTop:7,justifyContent:'center'}}>
                 <Text>+$5.50</Text>
@@ -51,11 +53,13 @@ const styles = StyleSheet.create({
     btn:{
         height: 25,
         marginTop:10,
-        width: 67,
-        marginLeft: 10,
+        width: 65,
+        marginLeft: 6,
         padding:2,
-        borderRadius: 8,
-        elevation:1
+        shadowOpacity: 1.27,
+        shadowRadius:2.65,
+        elevation:0.25,
+        borderRadius:15
     }
     
   })

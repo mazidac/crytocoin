@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TouchableOpacity, View, Image,StyleSheet } from "react-native";
+import { Text, TouchableOpacity, View, Image,StyleSheet,Dimensions } from "react-native";
 
 
 const ListItem = ({coinImage,coinName,usd_price,_24hrchange,symbol,onPress}) =>{
@@ -9,11 +9,13 @@ const ListItem = ({coinImage,coinName,usd_price,_24hrchange,symbol,onPress}) =>{
         <TouchableOpacity onPress={onPress} style={{
           height: 120,
           marginTop:20,
-          width: 390,
-          marginLeft: 10,
+          padding:-5,
+          width:Dimensions.get("window").width ,
           marginBottom:7,
-          borderRadius: 8,
-          elevation:0.5
+          
+          shadowOpacity: 1.27,
+shadowRadius: 5.65,
+elevation:0.25
         }}>
             <View style={styles.itemWrapper}>
                 <View style={styles.leftWrapper}>
